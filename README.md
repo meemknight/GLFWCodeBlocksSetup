@@ -26,7 +26,7 @@ They are very important because they will enable OpenGL error reporting for you!
 Other than that this is a normal code blocks project, enjoy!
 
 Note that you might need to enable the 64 bit compiler
- -> settings -> compiler -> top dropdown select GNU GCC TDM-64 Compiler
+ -> settings -> compiler -> top dropdown select GNU GCC TDM-64 Compiler  and press set as default compiler, or 
 
 If you want other templates that use CMake, or a Visual Studio Template, check out this video:
 https://www.youtube.com/watch?v=FrVABOhRyQg
