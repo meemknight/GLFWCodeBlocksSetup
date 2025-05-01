@@ -1,4 +1,5 @@
 bin/
 obj/
 GLFWCodeBlocksSetup.depend
+GLFWCodeBlocksSetup.layout
 imgui.ini

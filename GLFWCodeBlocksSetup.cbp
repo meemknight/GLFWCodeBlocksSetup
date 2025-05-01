@@ -30,9 +30,45 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-std=c++17" />
+			<Add option="-m64" />
 			<Add option="-fexceptions" />
+			<Add option="-march=native" />
+			<Add option="-mfma" />
+			<Add directory="include" />
+			<Add directory="thirdParty/glfw/include" />
+			<Add directory="thirdParty/glad/include" />
+			<Add directory="thirdParty/gl2d/include" />
+			<Add directory="thirdParty/stb_image/include" />
+			<Add directory="thirdParty/stb_truetype/include" />
+			<Add directory="thirdParty/glm" />
+			<Add directory="thirdParty/imgui-docking/imgui" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Linker>
+			<Add option="-m64" />
+			<Add library="thirdParty/glfw/lib-mingw-w64/libglfw3.a" />
+			<Add library="thirdParty/glfw/lib-mingw-w64/libglfw3dll.a" />
+			<Add library="libopengl32.a" />
+			<Add library="gdi32" />
+			<Add directory="thirdParty/glfw/lib-mingw-w64" />
+		</Linker>
+		<Unit filename="include/openglErrorReporting.h" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/openglErrorReporting.cpp" />
+		<Unit filename="thirdParty/gl2d/src/gl2d.cpp" />
+		<Unit filename="thirdParty/gl2d/src/gl2dParticleSystem.cpp" />
+		<Unit filename="thirdParty/glad/src/glad.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="thirdParty/imgui-docking/imgui/backends/imgui_impl_glfw.cpp" />
+		<Unit filename="thirdParty/imgui-docking/imgui/backends/imgui_impl_opengl3.cpp" />
+		<Unit filename="thirdParty/imgui-docking/imgui/imgui.cpp" />
+		<Unit filename="thirdParty/imgui-docking/imgui/imgui_demo.cpp" />
+		<Unit filename="thirdParty/imgui-docking/imgui/imgui_draw.cpp" />
+		<Unit filename="thirdParty/imgui-docking/imgui/imgui_tables.cpp" />
+		<Unit filename="thirdParty/imgui-docking/imgui/imgui_widgets.cpp" />
+		<Unit filename="thirdParty/stb_image/src/stb_image.cpp" />
+		<Unit filename="thirdParty/stb_truetype/src/stb_truetype.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
